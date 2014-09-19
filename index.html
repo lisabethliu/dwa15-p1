@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html ng-app="App">
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+
+  <link href="css/app.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <title>Welcome to Lisa Liu's home page</title>
+</head>
+<body>
+<div class="container-fluid">
+  <div class="header">
+    <ul class="nav nav-pills pull-right">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">P2</a></li>
+      <li><a href="#">P3</a></li>
+      <li><a href="#">P4</a></li>
+    </ul>
+    <h3 class="text-muted">LISABETH LIU</h3>
+  </div>
+
+  <div ng-controller="CarouselCtrl">
+    <div>
+      <carousel interval="interval">
+        <slide ng-repeat="slide in slides" active="slide.active">
+          <img ng-src="{{slide.image}}" style="margin:auto;">
+          <div class="carousel-caption">
+            <h4>{{slide.text}}</h4>
+          </div>
+        </slide>
+      </carousel>
+    </div>
+  </div>
+
+  <div class="row marketing">
+    <div class="col-lg-6">
+      <h4>In 2+ sentences describe who you are and what you do.</h4>
+
+      <p>Hi I am Lisabeth Liu and I previously worked as Paralegal in Microsoft.</p>
+
+      <h4>Why are you taking this course?</h4>
+
+      <p>I am taking this course to learn more about web development.</p>
+
+      <h4>What previous experience do you have with programming?</h4>
+
+      <p>I have some experience in developing simple websites using HTML/CSS/Javascript.</p>
+    </div>
+
+    <div class="col-lg-6">
+      <h4>Are you working on a Mac, PC, or some other platform?</h4>
+
+      <p>I work on Windows PC primarily, and occasionally use on Mac laptop as an addition.</p>
+
+      <h4>What previous experience do you have with programming?</h4>
+
+      <p>I have been a programming and AI enthusiast for past 3 years. I am very comfortable
+          programming in C++ and scripting languages like Python.</p>
+
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>&copy; Lisa Liu 2014</p>
+  </div>
+
+</div>
+<script src="js/app.js"></script>
+<script src="js/controllers/carouselCtrl.js"></script>
+</body>
+</html>
